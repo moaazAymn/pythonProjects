@@ -3,15 +3,14 @@ import pyautogui
 import pyperclip
 
 message = """
-مرحباً، كيف حالك؟
-أريد منك أموال
-red flag
+your
+message
 """
 
 
 def send_whatsapp_message():
     with open(
-        r"E:\Projects\Coding\pythonProjects\numbers.txt", "r", encoding="utf-8"
+        r"numbers.txt", "r", encoding="utf-8"
     ) as file:
         phone_numbers = file.read().splitlines()
     time.sleep(2)
