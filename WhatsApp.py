@@ -1,17 +1,14 @@
-import time
-import pyautogui
-import pyperclip
-
 message = """
 your
 message
 """
+import time
+import pyautogui
+import pyperclip
 
 
 def send_whatsapp_message():
-    with open(
-        r"numbers.txt", "r", encoding="utf-8"
-    ) as file:
+    with open(r"numbers.txt", "r", encoding="utf-8") as file:
         phone_numbers = file.read().splitlines()
     time.sleep(2)
     for phone_number in phone_numbers:
