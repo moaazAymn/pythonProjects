@@ -1,0 +1,37 @@
+import pyperclip
+import time
+import pyautogui
+
+message = """ضع رسالتك هنا بأي لغة
+input your message here in any language
+"""
+
+with open(r"E:\Projects\Coding\pythonProjects\numbers.txt", "r", encoding="utf-8") as file:
+    phone_numbers = file.read().splitlines()
+
+pyautogui.hotkey("ctrl", "alt", "g")
+time.sleep(3)
+pyautogui.write(f"wa.me ")
+time.sleep(3)
+pyautogui.press("enter")
+time.sleep(3)
+pyautogui.press("tab")
+time.sleep(3)
+pyautogui.press("enter")
+time.sleep(3)
+
+def send_whatsapp_message():
+    for phone_number in phone_numbers:
+        pyautogui.hotkey("ctrl", "alt", "g")
+        time.sleep(3)
+        pyautogui.write(f"wa.me/{phone_number} ")
+        pyautogui.press("enter")
+        time.sleep(3)
+        pyperclip.copy(f"{message}")
+        pyautogui.hotkey("ctrl", "v")
+        pyautogui.press("enter")
+        time.sleep(3)
+        pyautogui.press("enter")
+
+
+send_whatsapp_message()
