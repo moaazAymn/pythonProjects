@@ -6,7 +6,7 @@ message = """ضع رسالتك هنا بأي لغة
 input your message here in any language
 """
 
-with open(r"E:\Projects\Coding\pythonProjects\numbers.txt", "r", encoding="utf-8") as file:
+with open(r"input your txt file numbers path here", "r", encoding="utf-8") as file:
     phone_numbers = file.read().splitlines()
 
 pyautogui.hotkey("ctrl", "alt", "g")
